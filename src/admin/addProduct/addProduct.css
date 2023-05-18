@@ -1,0 +1,14 @@
+.addProduct {
+  display: flex;
+}
+
+.addProContainer {
+  flex: 7;
+  background-color: rgba(237, 255, 254, 0.912);
+}
+
+.addProTitle {
+  margin: 20px;
+  font-size: 23px;
+  font-weight: 600;
+}

@@ -5,6 +5,11 @@ import Orders from "./pages/orders/Orders";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import AdminHome from "./admin/home/AdminHome";
+import Checkout from "./pages/checkout/Checkout";
+import { Toaster } from "react-hot-toast";
+import ManageProduct from "./admin/manageProduct/ManageProduct";
+import AddProduct from "./admin/addProduct/AddProduct";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/orders",
-        element: <Orders />,
+        element: (
+          <PrivateRoute>
+            <Orders />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -29,7 +38,38 @@ const router = createBrowserRouter([
       },
       {
         path: "/admin",
-        element: <AdminHome />,
+        element: (
+          <PrivateRoute>
+            <AdminHome />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/checkout/:id",
+        element: (
+          <PrivateRoute>
+            <Checkout />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/api/products/product/${params.id}`),
+      },
+      {
+        path: "/admin/manage-products",
+        element: (
+          <PrivateRoute>
+            <ManageProduct />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/admin/add-product",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <AddProduct />
+          </PrivateRoute>
+        ),
       },
     ],
   },
@@ -39,6 +79,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
+      <Toaster />
     </div>
   );
 }

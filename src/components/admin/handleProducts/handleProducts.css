@@ -1,0 +1,44 @@
+.ptContainer {
+  max-width: 1024px;
+
+  margin: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productTable th,
+.productTable td {
+  padding: 10px;
+
+  text-align: left;
+}
+
+.productTable th {
+  background-color: #f0f0f0;
+  /* border-radius: 10px; */
+}
+
+.productTable td {
+  /* border: none;
+   */
+  border-bottom: 1px solid #ccc;
+}
+
+.editIcon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.sidebar {
+  flex: 2;
+  background-color: #2a3239;
+  min-height: 100vh;
+}
+
+.top {
+  padding: 25px;
+}
+
+.adminLogo {
+  font-size: 25px;
+  font-weight: 600;
+  color: #17cf97;
+}
+
+.bottom {
+  /* padding-top: 20px;
+  padding-left: 45px; */
+}
+
+.liItem {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-bottom: 10px;
+}
+
+.liItem:hover {
+  background-color: rgb(84, 84, 84);
+}
+
+.liItemText {
+  margin-left: 10px;
+}

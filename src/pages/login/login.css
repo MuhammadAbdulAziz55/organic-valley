@@ -1,0 +1,172 @@
+.form-container {
+  width: 370px;
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding-left: 35px;
+  background-color: white;
+  color: black;
+}
+
+.form-title {
+  text-align: start;
+  font-size: 23px;
+  line-height: 42px;
+  letter-spacing: 0.0025em;
+  color: black;
+  margin-top: 20px;
+}
+
+.form-control input {
+  width: 300px;
+  height: 30px;
+
+  border-radius: 5px;
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-submit {
+  width: 300px;
+  height: 40px;
+  margin-top: 30px;
+  background: #17cf97;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+  color: #fff;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.btn-create-account {
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  background: rgb(221, 151, 22);
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+  color: #fff;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #07a274;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid lightgray;
+  outline: none;
+  background: transparent;
+}
+
+.remember {
+  padding-right: 105px;
+}
+
+.remember-forget {
+  font-size: 0.8em;
+}
+
+input::-webkit-input-placeholder {
+  color: gray;
+}
+
+.hLineText {
+  position: relative;
+  font-size: 20px;
+  margin: 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hLineText::before {
+  content: "";
+  height: 2px;
+  width: 9vw;
+
+  background-color: lightgray;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: -2;
+}
+
+.hLineText::after {
+  content: "";
+  height: 2px;
+  width: 9vw;
+  background-color: lightgray;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -2;
+}
+
+.hlSpan {
+  padding: 0 10px;
+  background: white;
+  color: black;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.loginButton {
+  cursor: pointer;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0;
+  font-weight: 500;
+  color: black;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-radius: 20px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: lightgray;
+}
+
+.LoginIcon {
+  width: 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.facebook {
+  margin-bottom: 20px;
+}
+
+.textLink {
+  font-size: 14px;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.link {
+  color: #07a274;
+}

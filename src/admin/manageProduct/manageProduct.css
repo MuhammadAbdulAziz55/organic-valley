@@ -1,0 +1,15 @@
+.managePd {
+  display: flex;
+}
+
+.managePdContainer {
+  flex: 6;
+  background-color: rgba(237, 255, 254, 0.912);
+}
+
+.mTitle {
+  font-size: 23px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}

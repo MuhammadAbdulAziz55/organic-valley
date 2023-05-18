@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
+import { AuthContext } from "../../context/AuthProvider";
+import { toast } from "react-hot-toast";
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
-
+  const { user, logOut } = useContext(AuthContext);
+  const [openModal, setOpenModal] = useState(false);
+  const location = useLocation();
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
+  };
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("Your has been logged out successfully");
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      })
+      .catch((e) => console.error(e));
   };
   return (
     <nav>
@@ -19,35 +33,61 @@ const Navbar = () => {
             id="navItems"
             className={`${menuVisible ? "#navItems active" : "#navItems"}`}
           >
-            <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-              <li className="active">Home</li>
+            <Link
+              to="/"
+              className={`navLink ${location.pathname === "/" ? "active" : ""}`}
+            >
+              <li>Home</li>
             </Link>
             <Link
+              className={`navLink ${
+                location.pathname === "/orders" ? "active" : ""
+              }`}
               to="/orders"
-              style={{ color: "inherit", textDecoration: "none" }}
             >
               <li>Orders</li>
             </Link>
             <Link
+              className={`navLink ${
+                location.pathname === "/admin" ? "active" : ""
+              }`}
               to="/admin"
-              style={{ color: "inherit", textDecoration: "none" }}
             >
               <li>Admin</li>
             </Link>
             <Link
+              className={`navLink ${
+                location.pathname === "/deals" ? "active" : ""
+              }`}
               to="/deals"
-              style={{ color: "inherit", textDecoration: "none" }}
             >
               <li>Deals</li>
             </Link>
-            <Link
-              to="/login"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <li>Login</li>
-            </Link>
+            {user?.uid ? (
+              <div onClick={() => setOpenModal(!openModal)}>
+                <img src={user?.photoURL} alt="" className="userPhoto" />
+              </div>
+            ) : (
+              <Link
+                className={`navLink ${
+                  location.pathname === "/login" ? "active" : ""
+                }`}
+                to="/login"
+              >
+                <li>Login</li>
+              </Link>
+            )}
           </ul>
         </div>
+
+        {openModal && (
+          <div className="profileModal">
+            <button onClick={handleLogOut} className="logoutButton">
+              Logout
+            </button>
+          </div>
+        )}
+
         <div id="mobile" onClick={toggleMenu}>
           {menuVisible ? (
             <FontAwesomeIcon className="icon" icon={faTimes} />
