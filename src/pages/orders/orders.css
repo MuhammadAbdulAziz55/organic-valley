@@ -1,36 +1,53 @@
-.orders-container {
+.ordersContainer {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.orders-title {
+.ordersTitle {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.orders-table {
+.ordersTable {
   width: 100%;
   border-collapse: collapse;
 }
 
-.orders-table th,
-.orders-table td {
+.ordersTable th,
+.ordersTable td {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
 
-.orders-table th {
+.ordersTable th {
   background-color: #f0f0f0;
 }
 
-.orders-table td {
+.ordersTable td {
   font-size: 14px;
 }
 
 .deleteButton {
   cursor: pointer;
   color: rgba(255, 42, 0, 0.737);
+}
+
+@media screen and (max-width: 480px) {
+  .ordersContainer {
+    padding: 15px;
+  }
+  .ordersTrTitle {
+    font-size: 10px;
+  }
+  .ordersTable td {
+    font-size: 8px;
+  }
+
+  .ordersTable th,
+  .ordersTable td {
+    padding: 5px;
+  }
 }

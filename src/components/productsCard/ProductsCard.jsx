@@ -12,8 +12,8 @@ const ProductsCard = ({ product }) => {
 
           <div className="prInfo">
             <h3 className="prTitle">{product.title}</h3>
-            <p class="weight">{product.weight}</p>
-            <p class="price">${product.price}</p>
+            <p class="prWeight">{product.weight}</p>
+            <p class="prPrice">${product.price}</p>
           </div>
         </div>
         <div className="iconContainer">

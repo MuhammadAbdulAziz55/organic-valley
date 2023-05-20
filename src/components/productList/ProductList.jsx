@@ -1,11 +1,13 @@
 import useFetch from "../../hooks/useFetch";
 import ProductsCard from "../productsCard/ProductsCard";
 import Spinner from "../spinner/Spinner";
+import Spinner2 from "../spinner/Spinner2";
+
 import "./productList.css";
 
 const ProductList = () => {
   const { data, loading, error } = useFetch(
-    "http://localhost:5000/api/products/"
+    "https://organic-valley-server.onrender.com/api/products/"
   );
   console.log(data);
   return (
@@ -14,7 +16,7 @@ const ProductList = () => {
         <span>ORGANIC VEGETABLE</span>
       </h1>
       {loading ? (
-        <Spinner />
+        <Spinner2 />
       ) : (
         <div className="container">
           {data &&

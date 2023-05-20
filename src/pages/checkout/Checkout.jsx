@@ -16,9 +16,10 @@ const Checkout = () => {
   const createOrder = async (data) => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/order/create",
+        "https://organic-valley-server.onrender.com/api/order/create",
         data
       );
+      console.log("data", data);
 
       toast.success("Your order has been successfully placed");
       setTimeout(() => {
@@ -26,8 +27,8 @@ const Checkout = () => {
       }, 1000);
 
       return res.data;
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.error(error.response.data);
     }
   };
   return (

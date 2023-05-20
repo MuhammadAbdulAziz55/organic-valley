@@ -65,7 +65,15 @@ const Navbar = () => {
             </Link>
             {user?.uid ? (
               <div onClick={() => setOpenModal(!openModal)}>
-                <img src={user?.photoURL} alt="" className="userPhoto" />
+                {user?.photoUrl ? (
+                  <img src={user?.photoURL} alt="" className="userPhoto" />
+                ) : (
+                  <img
+                    src="https://i.ibb.co/cTPWD5X/Avatar-face.png"
+                    alt=""
+                    className="userPhoto"
+                  />
+                )}
               </div>
             ) : (
               <Link
@@ -90,9 +98,9 @@ const Navbar = () => {
 
         <div id="mobile" onClick={toggleMenu}>
           {menuVisible ? (
-            <FontAwesomeIcon className="icon" icon={faTimes} />
+            <FontAwesomeIcon className="navIcon" icon={faTimes} />
           ) : (
-            <FontAwesomeIcon className="icon" icon={faBars} />
+            <FontAwesomeIcon className="navIcon" icon={faBars} />
           )}
         </div>
       </div>

@@ -49,6 +49,7 @@
   grid-template-columns: repeat(6, 1fr); /* column width of 6 */
   grid-gap: 20px;
   margin: 0 10%;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -57,5 +58,9 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     margin: 0 10px;
+  }
+
+  .plTitle {
+    font-size: 18px;
   }
 }

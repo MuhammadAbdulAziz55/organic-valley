@@ -76,9 +76,9 @@ const OrderDetails = ({
           />
         </div> */}
         <div className="odItem">
-          <label className="odLabel">Address</label>
+          <label className="odLabelAddress">Address</label>
           <textarea
-            rows={5}
+            rows={4}
             placeholder="Elton St. 505 NY"
             type="text"
             className="textarea"

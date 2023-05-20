@@ -7,7 +7,9 @@ import Spinner from "../../spinner/Spinner";
 const HandleProducts = () => {
   const [list, setList] = useState();
 
-  const { data, loading } = useFetch("http://localhost:5000/api/products/");
+  const { data, loading } = useFetch(
+    "https://organic-valley-server.onrender.com/api/products/"
+  );
 
   useEffect(() => {
     setList(data);
@@ -15,7 +17,9 @@ const HandleProducts = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(
+        `https://organic-valley-server.onrender.com/api/products/${id}`
+      );
       const updatedData = list.filter((item) => item._id !== id);
       setList(updatedData);
     } catch (err) {}

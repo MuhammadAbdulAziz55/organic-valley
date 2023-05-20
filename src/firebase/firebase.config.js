@@ -3,12 +3,12 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCLfFqtRpJOORaMK1bKM17oH3ZrGgFdmeI",
-  authDomain: "organic-valley-bd.firebaseapp.com",
-  projectId: "organic-valley-bd",
-  storageBucket: "organic-valley-bd.appspot.com",
-  messagingSenderId: "826501992307",
-  appId: "1:826501992307:web:657ad6fb8060f133337f06",
+  apiKey: process.env.REACT_APP_apiKey ,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId ,
 };
 
 // Initialize Firebase

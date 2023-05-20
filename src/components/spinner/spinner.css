@@ -1,4 +1,4 @@
-.spinner {
+/* .spinner {
   width: 40px;
   height: 40px;
   margin: 0 auto;
@@ -12,4 +12,11 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.spinner {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
 }

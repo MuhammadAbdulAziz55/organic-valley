@@ -6,7 +6,7 @@ import { toast } from "react-hot-toast";
 
 import { Link } from "react-router-dom";
 const Register = () => {
-  const { CreateAccount, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -25,7 +25,7 @@ const Register = () => {
       toast.error("Your password didn't match. Please try again");
     }
     if (password === confirmPassword) {
-      return CreateAccount(email, password)
+      return createUser(email, password)
         .then((res) => {
           const user = res.user;
           console.log("user", user);

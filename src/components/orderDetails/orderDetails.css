@@ -52,8 +52,8 @@
   margin-bottom: 15px;
 }
 
-.odLabel {
-  margin-bottom: 10px;
+.odLabelAddress {
+  margin-bottom: 5px;
 }
 
 .odInput {
@@ -70,4 +70,43 @@
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.textarea {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .odTitle {
+    font-size: 20px;
+  }
+  .odWrapper {
+    padding: 30px;
+    width: 400px;
+  }
+
+  .odLabel {
+    font-size: 14px;
+  }
+  .odLabelAddress {
+    font-size: 14px;
+  }
+
+  .odInput {
+    font-size: 12px;
+  }
+  .textarea {
+    font-size: 12px;
+  }
+
+  .odButton {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .closeButton {
+    width: 30px;
+    height: 30px;
+  }
 }

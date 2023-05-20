@@ -24,7 +24,10 @@ const HandleAddProduct = () => {
       const { url } = uploadRes.data;
       const newProduct = { ...info, photos: url };
       // console.log(newProduct);
-      await axios.post("http://localhost:5000/api/products/", newProduct);
+      await axios.post(
+        "https://organic-valley-server.onrender.com/api/products/",
+        newProduct
+      );
       toast.success("Your product has been successfully created");
 
       setTimeout(() => {

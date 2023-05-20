@@ -119,9 +119,10 @@ nav {
     padding: 40px 0 0 10px;
     position: absolute;
     transition: 0.5s ease-in-out;
+    z-index: 999;
   }
 
-  #navLink.active {
+  #navItems.active {
     right: 0;
   }
   #navItems li {
@@ -131,8 +132,43 @@ nav {
     display: block;
   }
 
-  .icon {
+  .navIcon {
     font-size: 24px;
     cursor: pointer;
+    color: white;
+  }
+
+  .profileModal {
+    position: absolute;
+    top: 340px;
+    right: 170px;
+    margin-right: 0px;
+    background-color: white;
+    border-radius: 5px;
+    /* padding: 20px; */
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+
+  .logoutButton {
+    padding: 2px 2px;
+
+    color: #17cf97;
+    background-color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .navLink:hover ::after,
+  .navLink.active::after {
+    bottom: 10px;
+  }
+
+  .userPhoto {
+    margin-left: 10px;
   }
 }

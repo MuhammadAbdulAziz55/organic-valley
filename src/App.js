@@ -52,7 +52,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/products/product/${params.id}`),
+          fetch(
+            `https://organic-valley-server.onrender.com/api/products/product/${params.id}`
+          ),
       },
       {
         path: "/admin/manage-products",
