@@ -27,7 +27,13 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navContainer">
-        <div className="navLogo">ORGANIC VALLEY</div>
+        <Link
+          to="/"
+          style={{ textDecoration: "none", textDecorationColor: "inherit" }}
+        >
+          {" "}
+          <div className="navLogo">ORGANIC VALLEY</div>
+        </Link>
         <div>
           <ul
             id="navItems"
